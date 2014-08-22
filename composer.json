@@ -8,7 +8,13 @@
     },
     "autoload": {
         "psr-0" : {
-            "HandlebarsHelpers" : "src"
+            "DavideOrazio\\HandlebarsHelpers" : "src"
         }
+    },
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/DavideMontersino/handlebars.php-helpers"
     }
+	]
 }
