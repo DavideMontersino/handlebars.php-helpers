@@ -1,8 +1,14 @@
 {
-    "name": "weaverryan/derp-dangerzone",
+    "name": "DavideOrazio/handlebars.php-helpers",
+    "description": "Handlebars helpers for xamin/handlebars (https://github.com/XaminProject/handlebars.php)",
+    "homepage": "https://github.com/DavideMontersino/handlebars.php-helpers",
+    "type": "library",
+    "require": {
+    	"xamin/handlebars.php": "dev-master"
+    },
     "autoload": {
         "psr-0" : {
-            "Weaverryan\\DangerZone" : "src"
+            "HandlebarsHelpers" : "src"
         }
     }
 }
