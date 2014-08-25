@@ -2,11 +2,12 @@
 
 namespace DavideOrazio\HandlebarsHelpers;
 
-class DateHelper extends CustomHelper
+class StringFormatHelper extends CustomHelper
 {
 	public function execute(\Handlebars\Template $template, \Handlebars\Context $context, $args, $source)
     {
-        return date_format_day($context->get($args));
+    	$args = $this->ParseArgs($args);
+
+        return sprintf($args[0], $context->get($args[1]));
     }
 }
-
