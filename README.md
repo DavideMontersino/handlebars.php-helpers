@@ -53,13 +53,16 @@ In order to use the helpers, you need to register them into your Handlebars inst
 ##DateHelper
 Formats a date in day-month-year
 
+    {{#Date yourDateVar}}
+
 ##StringFormat
 A simple wrapper for PHP's `sprintf`.. (currently for one var only)!
 
-{{#StringFormat "your variable string: %s" yourVar}}
+    {{#StringFormat "your variable string: %s" yourVar}}
 
 ##EachUpTo
 Allows you to loop through `yourVar`, but specifing a maximum number of items (`upperLimit`)
+    
     {{#EachUpTo yourVar upperLimit}}
     ...
     {{/EachUpTo}}
