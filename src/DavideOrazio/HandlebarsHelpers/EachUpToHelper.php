@@ -48,11 +48,14 @@ class EachUpToHelper extends CustomHelper
     public function execute(Template $template, Context $context, $args, $source)
     {
         $args = $this->ParseArgs($args);
-        $tmp = $context->get($args[0]);
+        $dataSelector = implode(".", array_slice($args, 0, count($args) - 1));
+        $tmp = $context->get($dataSelector);
+
+
         if (count($args) == 1)
             $limit = 0;
         else
-            $limit = $args[1];
+            $limit = $args[count($args)-1];
         $buffer = '';
 
         if (!$tmp) {
